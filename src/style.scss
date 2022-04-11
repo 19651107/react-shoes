@@ -22,305 +22,201 @@
   margin: 0 auto;
   width: 100%;
 }
-.header{
-  padding: 44px 0;
-  &__navbar{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    &::before{
-      content: '';
-      position: absolute;
-      background-color: #EAEAEA;
-      height: 1px;
-      width: 1170px;
-      bottom: -43px;
-      right: -48px;
-    }
-  }
-  &__right{
-    display: flex;
-    align-items: center;
-    column-gap: 16px;
-    &-title{
-      font-family: 'Inter',sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 24px;
-      text-transform: uppercase;
-      color: #000000;
 
-    }
-  }
-  &__left{
-    display: flex;
-    align-items: center;
-    column-gap: 30px;
-    cursor: pointer;
-    &-logo{
-      display: flex;
-      column-gap: 10px;
-    }
+@media (min-width: 1200px) {
+  .App {
+    max-width: 1200px;
   }
 }
-
-.search{
-  padding: 39px 0;
-  &__card{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    &-svg{
-      position: absolute;
-      top: 15px;
-      right: 217px;
-    }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 935px;
+    margin: 0 auto;
   }
-  &__trainer{
-    font-family: 'Inter',sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
-    color: #000000;
-  }
-  &__input{
-    font-family: 'Inter',sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #C4C4C4;
-    outline: none;
-    border: 1px solid #F3F3F3;
-    box-sizing: border-box;
-    border-radius: 10px;
-    padding-left: 46px;
-    width: 250px;
-    height: 45px;
-  }
-}
-
-
-.trainers{
-
-  &__row{
+  .trainers__row {
     display: flex;
     flex-wrap: wrap;
     row-gap: 35px;
-    column-gap: 135px;
-    margin-bottom: 40px;
+    column-gap: 70px;
   }
-  &__card{
-    background: #FFFFFF;
-    border: 1px solid #F3F3F3;
-    box-sizing: border-box;
-    border-radius: 40px;
-    padding: 20px 29px 34px 31px;
-    transition: .3s;
-    flex-basis: calc(100% / 4);
-    &-like{
-      position: absolute;
-      cursor: pointer;
-    }
-    &:hover{
-      transform: scale(1.1);
-      border: 1px solid #F8F8F8;
-      box-sizing: border-box;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.05);
-      border-radius: 40px;
-      transition: .3s;
-    }
+  .drawer{
+    width: 350px;
   }
-  &__title{
-    font-family: 'Inter',sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container{
+    padding: 0 20px;
+  }
+  .trainers__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 35px;
+    column-gap: 145px;
+    padding: 0 25px;
+  }
+  #root {
+    padding: 65px 0;
+  }
+  .drawer {
+    padding: 20px;
+  }
+  .drawer__cart-img {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+  }
+  .drawer__cart-price {
+    font-size: 13px;
     line-height: 17px;
-    color: #000000;
-    text-align: left;
-    margin: 14px 0;
   }
-  &__img{
-    width: 176px;
-    height: 135px;
-    user-select: none;
-  }
-  &__prices{
-    display: flex;
-    column-gap: 116px;
-    &-price{
-      font-family: 'Inter',sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 11px;
-      line-height: 13px;
-      text-transform: uppercase;
-      color: #BDBDBD;
-    }
-    &-cost{
-      font-family: 'Inter',sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 17px;
-      color: #000000;
-    }
-    &-plus{
-      font-size: 25px;
-      color: #D3D3D3;
-      background: #FFFFFF;
-      border: 1px solid #F2F2F2;
-      box-sizing: border-box;
-      border-radius: 8px;
-      padding: 7px 12px;
-      cursor: pointer;
-      user-select: none;
-    }
+  .drawer__cart-close {
+    margin-left: 7px;
   }
 }
-
-
-.overlay{
-  position: fixed;
-  background-color: rgba(0,0,0,0.1);
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  top: 0;
-  left: 0;
-}
-
-
-.drawer{
-  position: fixed;
-  background-color: #FFFFFF;
-  width: 385px;
-  height: 100vh;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  padding: 30px;
-  &__basket{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    &-title{
-      font-family: 'Inter',sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 29px;
-      color: #000000;
-    }
-    &-close{
-      font-size: 20px;
-      border: 1px solid #DBDBDB;
-      border-radius: 10px;
-      width: 32px;
-      height: 32px;
-      text-align: center;
-      opacity: 50%;
-      cursor: pointer;
-    }
+@media (max-width: 767px) {
+  .trainers__row {
+    padding: 0 90px;
   }
-  &__cart{
+  .search__trainer {
+    font-size: 25px;
+    line-height: 37px;
+  }
+  .container{
+    padding: 0 20px;
+  }
+  .search__input {
+    width: 170px;
+    height: 38px;
+  }
+  .search__card-svg {
+    top: 12px;
+    right: 137px;
+  }
+  .search__img {
+    height: 260px;
+    width: 100%;
+  }
+  #root{
+    padding: 0;
+    background-color: #FFFFFF;
+  }
+  .header__img{
+    width: 65px;
+    height: 65px;
+  }
+  .svg{
+    display: none;
+  }
+  .header__right {
     display: flex;
     align-items: center;
-    &-img{
-      width: 80px;
-      height: 80px;
-      margin-right: 21px;
-    }
-    &-close{
-      background-color: transparent;
-      border: none;
-      margin-left: 12px;
-    }
-    &-title{
-      font-family: 'Inter',sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 17px;
-      color: #000000;
-      margin-bottom: 8px;
-    }
-    &-price{
-      font-family: 'Inter',sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 17px;
-      color: #000000;
-    }
+    column-gap: 5px;
   }
-  &__zero{
-    padding: 180px 0 0 0;
+  .drawer__cart-img {
+    width: 71px;
+    height: 71px;
+    margin-right: 10px;
+  }
+  .drawer__cart-title {
+    font-size: 12px;
+    line-height: 17px;
+    margin-bottom: 8px;
+  }
+  .drawer__cart-price {
+    font-size: 12px;
+  }
+  .drawer {
+    padding: 20px;
+  }
+  .drawer__total-price {
+    display: flex;
+    font-size: 14px;
+  }
+  .drawer__total-btn {
+    font-size: 15px;
     text-align: center;
-    &-title{
-      font-family: 'Inter',sans-serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 22px;
-      line-height: 27px;
-      color: #000000;
-      margin: 21px 0 9px 0;
-    }
-    &-subtitle{
-      font-family: 'Inter',sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: center;
-      color: #000000;
-      opacity: 0.4;
-      margin-bottom: 40px;
-    }
-    &-back{
-      font-family: 'Inter',sans-serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 19px;
-      text-align: center;
-      color: #FFFFFF;
-      background: #9DD458;
-      border-radius: 18px;
-      width: 245px;
-      height: 55px;
-      border: none;
-      cursor: pointer;
-      span{
-        padding-right: 20px;
-      }
-    }
+    border-radius: 18px;
+    width: 290px;
+    height: 50px;
+    margin-top: 24px;
+    cursor: pointer;
   }
-  &__total{
+  .drawer__framed-btn {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    width: 235px;
+    height: 48px;
+    cursor: pointer;
+  }
+  .drawer__img{
+    width: 135px;
+  }
+  .search__img {
+    height: 275px;
+    width: 100%;
+  }
+  .search__card-svg {
     position: absolute;
-    bottom: 30px;
-    &-price{
-      display: flex;
-    }
-    &-btn{
-      font-family: 'Inter',sans-serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 19px;
-      text-align: center;
-      color: #FFFFFF;
-      background: #9DD558;
-      border-radius: 18px;
-      width: 325px;
-      height: 55px;
-      border: none;
-      margin-top: 24px;
-      cursor: pointer;
-    }
+    top: 15px;
+    right: 138px;
+  }
+  .search__trainer {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 39px;
+  }
+  .header__left {
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    cursor: pointer;
+  }
+  .header__right-title {
+    font-weight: 700;
+    font-size: 19px;
+  }
+  .header__right-subtitle{
+    font-size: 14px;
   }
 }
+@media (max-width: 480px) {
+  .search__img {
+    height: 209px;
+    width: 100%;
+  }
+  .trainers__row {
+    padding: 0 8px;
+  }
+  .header__left {
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  .drawer {
+    padding: 50px;
+  }
+  .drawer__total-btn {
+    font-size: 15px;
+    text-align: center;
+    border-radius: 18px;
+    width: 258px;
+    height: 44px;
+    margin-top: 24px;
+    cursor: pointer;
+  }
+  .drawer__img {
+    width: 125px;
+  }
+}
+@media (max-width: 320px) {
+  .trainers__row {
+    padding: 0 15px;
+  }
+}
+

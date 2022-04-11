@@ -1,0 +1,151 @@
+.search{
+  padding: 39px 0;
+  &__img{
+    height: 350px;
+    width: 100%;
+    border-radius: 20px;
+  }
+  &__swiper{
+    margin-bottom: 35px;
+    user-select: none;
+  }
+  &__card{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &-svg{
+      position: absolute;
+      top: 15px;
+      right: 217px;
+    }
+  }
+  &__trainer{
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #000000;
+  }
+  &__input{
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #C4C4C4;
+    outline: none;
+    border: 1px solid #F3F3F3;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-left: 46px;
+    width: 250px;
+    height: 45px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (max-width: 767px) {
+  .search__trainer {
+    font-size: 25px;
+    line-height: 37px;
+  }
+  .search__input {
+    width: 170px;
+    height: 38px;
+  }
+  .search__card-svg {
+    top: 12px;
+    right: 137px;
+  }
+  .search__img {
+    height: 260px;
+    width: 100%;
+  }
+  .search__img {
+    height: 275px;
+    width: 100%;
+  }
+  .search__card-svg {
+    position: absolute;
+    top: 15px;
+    right: 138px;
+  }
+  .search__trainer {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 39px;
+  }
+}
+@media (max-width: 480px) {
+  .trainers__row {
+    padding: 0 15px;
+  }
+  .search__input {
+    width: 110px;
+    height: 35px;
+  }
+  .search__card-svg {
+    position: absolute;
+    top: 10px;
+    right: 76px;
+  }
+  .search__trainer {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 39px;
+  }
+  .search__img {
+    height: 209px;
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .trainers__row {
+    padding: 0 15px;
+  }
+  .search__card-svg {
+    position: absolute;
+    top: 15px;
+    right: 78px;
+  }
+  .search__input {
+    width: 111px;
+    height: 44px;
+  }
+  .search__trainer {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 39px;
+  }
+  .search__img {
+    height: 181px;
+    width: 100%;
+  }
+  .header__navbar {
+    display: block;
+  }
+  .header__left {
+    column-gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__right {
+    margin-bottom: 32px;
+    column-gap: 15px;
+  }
+  .header__left-logo {
+    column-gap: 20px;
+  }
+  }
